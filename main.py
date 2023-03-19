@@ -5,7 +5,7 @@ def parallel_processing(n, m, data):
     # TODO: write the function for simulating parallel tasks, 
     # create the output pairs
     thread = [(0,i) for i in range(n)]
-    heapq.heap(thread)
+    heapq.heapify(thread)
     for i, darbs in enumerate(data):
         finish, x = heapq.heappop(thread)
         output.append((x, finish))
