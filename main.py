@@ -6,7 +6,7 @@ def parallel_processing(n, m, data):
     # create the output pairs
     thread = [(0,i) for i in range(n)]
     heapq.heapify(thread)
-    for darbs in enumerate(data):
+    for i,darbs in enumerate(data):
         finish, x = heapq.heappop(thread)
         output.append((x, finish))
         finish+=darbs
